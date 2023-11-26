@@ -171,8 +171,6 @@ plt.show()
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Assuming 'probabilities' contains the predicted probabilities from the classifier
-# and 'y_test' contains the true labels
 
 # Create a DataFrame with the predicted probabilities and the actual labels
 plot_df = pd.DataFrame({
@@ -206,8 +204,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# Assuming 'probabilities' contains the predicted probabilities from the classifier
-# and 'y_test' contains the true labels
 
 # Create a DataFrame with the actual labels and the predicted probabilities
 plot_df = pd.DataFrame({
@@ -349,10 +345,6 @@ plt.gca().invert_yaxis()  # Invert y-axis to have the most important feature at 
 plt.show()
 
 
-## The time_domain_activation could be indicative of how recently a domain was activated, which might be a factor in distinguishing phishing sites, as phishing domains often have a short life span.
-## directory_length and qty_space_directory might relate to the structure of the URL, where phishing URLs might have certain patterns that can be detected by these features.
-
-
 
 
 #------------------------------------------------------------------------------------------------------------#
@@ -421,8 +413,6 @@ plt.title('2D PCA visualization of Phishing vs. Non-Phishing')
 plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
 
-# Set limits for x and y axis to focus on the main cluster if needed
-# Uncomment and set the following lines to the appropriate values based on your data distribution
 plt.xlim([0, 30])
 plt.ylim([-10, 20])
 
@@ -479,28 +469,6 @@ print(f"Cumulative variance captured: {explained_variances.sum() * 100:.2f}%")
 
 
 
-############################# ACCURACY TABEL  ############################# 
-
-
-import pandas as pd
-
-accuracy_log_reg = 0.957
-accuracy_random_forest = 0.995 
-accuracy_knn = 0.994  
-accuracy_svm = 0.972  
-
-# Create a dictionary with model names and their corresponding accuracies
-accuracy_dict = {
-    'Model': ['Logistic Regression', 'Random Forest', 'K-Nearest Neighbors', 'Support Vector Machine'],
-    'Accuracy': [accuracy_log_reg, accuracy_random_forest, accuracy_knn, accuracy_svm]
-}
-
-# Create a DataFrame from the dictionary
-accuracy_df = pd.DataFrame(accuracy_dict)
-
-# Display the DataFrame as a table
-print(accuracy_df)
-
 
 
 
@@ -515,7 +483,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# ... [previous code for loading, preprocessing, balancing, and splitting the dataset]
 
 # Initialize the Random Forest classifier
 random_forest = RandomForestClassifier()
@@ -559,7 +526,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# ... [previous code for loading, preprocessing, balancing, and splitting the dataset]
 
 # Initialize the Random Forest classifier
 random_forest = RandomForestClassifier()
